@@ -16,7 +16,7 @@ public class RandomCustomDTED {
     private void populateArray() {
         for (int i = 0; i < elevationValues.length; i++) {
             for (int j = 0; j < elevationValues[i].length; j++) {
-                elevationValues[i][j] = ((int) (Math.random() * Integer.parseInt(ConfigProperties.getConfig("maxHeightOfTerrain")))+Math.abs(i+j-100));
+                elevationValues[i][j] = ((int) (Math.random() * Integer.parseInt(ConfigProperties.getConfig("maxHeightOfTerrain"))));
             }
         }
     }
@@ -30,9 +30,10 @@ public class RandomCustomDTED {
             for (int j = 0; j < elevationValues[i].length; j++) {
                 coordinates[coodinateArrayIndex++] = i * spaceBetweenPoints;
                 coordinates[coodinateArrayIndex++] = elevationValues[i][j];
-                coordinates[coodinateArrayIndex] = j * spaceBetweenPoints;
+                coordinates[coodinateArrayIndex++] = j * spaceBetweenPoints;
             }
         }
+        coordinates.toString();
     }
 
     public float[] getCoordinates() {

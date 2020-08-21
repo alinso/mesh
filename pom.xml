@@ -13,13 +13,14 @@
             <name>spring repo</name>
             <url>https://repo.spring.io/plugins-release/</url>
         </repository>
+        <repository>
+            <id>spring_repo</id>
+            <name>spring repo</name>
+            <url>https://dl.bintray.com/jmonkeyengine/org.jmonkeyengine/</url>
+        </repository>
 
     </repositories>
-    <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-core -->
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-desktop -->
-
         <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-core -->
         <dependency>
             <groupId>org.jmonkeyengine</groupId>
@@ -27,6 +28,19 @@
             <version>3.2.2-stable</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-lwjgl -->
+        <dependency>
+            <groupId>org.jmonkeyengine</groupId>
+            <artifactId>jme3-lwjgl</artifactId>
+            <version>3.3.2-stable</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-desktop -->
+        <dependency>
+            <groupId>org.jmonkeyengine</groupId>
+            <artifactId>jme3-desktop</artifactId>
+            <version>3.2.2-stable</version>
+        </dependency>
 
     </dependencies>
 
