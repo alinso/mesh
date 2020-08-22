@@ -13,9 +13,9 @@ public class Main {
 
         Mesh mesh = MeshFactory.getMesh();
         AppSettings settings = new AppSettings(true);
-        settings.put("Width", 1280);
-        settings.put("Height", 720);
-        settings.put("Title", ConfigProperties.getConfig("title"));
+        settings.put("Width", 1380);
+        settings.put("Height", 800);
+        settings.put("Title", ConfigProperties.getInstance().getConfig("title"));
 
         Visualize3DApp app = new Visualize3DApp();
         app.setShowSettings(false);

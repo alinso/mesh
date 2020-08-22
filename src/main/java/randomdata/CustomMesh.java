@@ -8,8 +8,8 @@ import config.ConfigProperties;
 
 public class CustomMesh {
 
-    private int dimensionX = Integer.parseInt(ConfigProperties.getConfig("dimensionX"));
-    private int dimensionY = Integer.parseInt(ConfigProperties.getConfig("dimensionY"));
+    private int dimensionX = Integer.parseInt(ConfigProperties.getInstance().getConfig("dimensionX"));
+    private int dimensionY = Integer.parseInt(ConfigProperties.getInstance().getConfig("dimensionY"));
     private float coordinates[];
     private int[] facePointsArray = new int[(dimensionX - 1) * (dimensionY - 1) * 2 * 3];
 

@@ -8,7 +8,6 @@ import com.jme3.input.KeyInput;
 import com.jme3.input.controls.AnalogListener;
 import com.jme3.input.controls.KeyTrigger;
 import com.jme3.material.Material;
-import com.jme3.material.RenderState;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Geometry;
@@ -62,7 +61,7 @@ public class Visualize3DApp extends SimpleApplication {
         Material mat = new Material(assetManager, "Common/MatDefs/Shadow/BasicPostShadow.j3md");
 
 
-        mat.getAdditionalRenderState().setFaceCullMode(RenderState.FaceCullMode.Off);
+        //mat.getAdditionalRenderState().setFaceCullMode(RenderState.FaceCullMode.Off);
         meshGeometry.setMaterial(mat);
         rootNode.attachChild(meshGeometry);
 
@@ -76,7 +75,7 @@ public class Visualize3DApp extends SimpleApplication {
         writeKeyboardExplanations();
         writeMeshDetails();
         setInputListeners();
-        cam.setLocation(new Vector3f(0, 150, 400));
+        cam.setLocation(new Vector3f(0, 150, 4000));
         viewPort.setBackgroundColor(ColorRGBA.LightGray);
 
     }
@@ -108,7 +107,7 @@ public class Visualize3DApp extends SimpleApplication {
 
     public void updateMesh() {
 
-        Integer targetTriangleCount = (selectedMesh.getTriangleCount() *(100-Integer.parseInt(ConfigProperties.getConfig("decimationPercent"))))/100;
+        Integer targetTriangleCount = (selectedMesh.getTriangleCount() *(100-Integer.parseInt(ConfigProperties.getInstance().getConfig("decimationPercent"))))/100;
         simlifiedMesh = simplifyMesh.simplify(targetTriangleCount,7,false);
         selectedMesh=simlifiedMesh;
         rootNode.detachAllChildren();

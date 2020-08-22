@@ -6,8 +6,18 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigProperties {
-  
-        public static String getConfig(String key)  {
+
+    private static final ConfigProperties instance = new ConfigProperties();
+
+    //private constructor to avoid client applications to use constructor
+    private ConfigProperties(){}
+    public static ConfigProperties getInstance(){
+        return instance;
+    }
+
+
+
+    public  String getConfig(String key)  {
              String result="";
             InputStream inputStream = null;
             try {

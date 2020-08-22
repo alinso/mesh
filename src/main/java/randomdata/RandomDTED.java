@@ -5,9 +5,9 @@ import config.ConfigProperties;
 public class RandomDTED {
 
 
-    private int dimensionX = Integer.parseInt(ConfigProperties.getConfig("dimensionX"));
-    private int dimensionY = Integer.parseInt(ConfigProperties.getConfig("dimensionY"));
-    private int spaceBetweenPoints = Integer.parseInt(ConfigProperties.getConfig("spaceBetweenPoints"));
+    private int dimensionX = Integer.parseInt(ConfigProperties.getInstance().getConfig("dimensionX"));
+    private int dimensionY = Integer.parseInt(ConfigProperties.getInstance().getConfig("dimensionY"));
+    private int spaceBetweenPoints = Integer.parseInt(ConfigProperties.getInstance().getConfig("spaceBetweenPoints"));
 
     private int[][] elevationValues = new int[dimensionX][dimensionY];
     private float[] coordinates = new float[dimensionX * dimensionY * 3];
@@ -16,7 +16,7 @@ public class RandomDTED {
     private void populateArray() {
         for (int i = 0; i < elevationValues.length; i++) {
             for (int j = 0; j < elevationValues[i].length; j++) {
-                elevationValues[i][j] = ((int) (Math.random() * Integer.parseInt(ConfigProperties.getConfig("maxHeightOfTerrain"))));
+                elevationValues[i][j] = ((int) (Math.random() * Integer.parseInt(ConfigProperties.getInstance().getConfig("maxHeightOfTerrain"))));
             }
         }
     }
