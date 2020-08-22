@@ -34,6 +34,13 @@
             <artifactId>jme3-lwjgl</artifactId>
             <version>3.3.2-stable</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-testdata -->
+        <dependency>
+            <groupId>org.jmonkeyengine</groupId>
+            <artifactId>jme3-testdata</artifactId>
+            <version>3.3.0-beta1</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.jmonkeyengine/jme3-desktop -->
         <dependency>

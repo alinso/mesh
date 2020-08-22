@@ -1,8 +1,8 @@
-package bussiness;
+package randomdata;
 
 import config.ConfigProperties;
 
-public class RandomCustomDTED {
+public class RandomDTED {
 
 
     private int dimensionX = Integer.parseInt(ConfigProperties.getConfig("dimensionX"));
