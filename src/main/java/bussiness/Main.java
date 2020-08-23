@@ -4,7 +4,7 @@ import com.jme3.scene.Mesh;
 import com.jme3.system.AppSettings;
 import config.ConfigProperties;
 import lib.SimplifyMesh;
-import randomdata.MeshFactory;
+import data.MeshFactory;
 
 public class Main {
 

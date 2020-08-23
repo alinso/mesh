@@ -1,4 +1,4 @@
-package randomdata;
+package data;
 
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Mesh;
@@ -67,6 +67,7 @@ public class CustomMesh {
         mesh.setBuffer(VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(vertices));
         mesh.setBuffer(VertexBuffer.Type.Index,   2, BufferUtils.createIntBuffer(calculateMeshFacePoints()));
         mesh.setBuffer(VertexBuffer.Type.Normal,   3, BufferUtils.createFloatBuffer(vertices));
+        mesh.setMode(Mesh.Mode.Triangles);
         mesh.updateBound();
 
         return mesh;
